@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: ghostwhite;
+}
+
+header {
+  padding: 0 25px;
+  font-size: large;
+}
+
+header img {
+  width: 5%;
+}
+
+.paper {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  background: #ffc60f;
+  margin: -275px -225px;
+  left: 17%;
+  top: 60%;
+  -webkit-box-shadow: 0px 0px 5px 0px #888;
+          box-shadow: 0px 0px 5px 0px #888;
+  color: #162c4e;
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: #162c4e;
+}
+
+.paper__lines {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-image: repeating-linear-gradient(#ffc60f 0px, #ffc60f 24px, white 25px);
+}
+
+.paper__lines--text {
+  position: absolute;
+  top: 65px;
+  left: 55px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 25px;
+  overflow: hidden;
+  outline: none;
+  font-weight: 600;
+}
+
+.paper__lines--text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #162c4e;
+}
+
+.holes {
+  position: absolute;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background: ghostwhite;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px 0px 2px 0px #888;
+          box-shadow: inset 0px 0px 2px 0px #888;
+}
+
+.hole-top {
+  top: 10%;
+}
+
+.hole-middle {
+  top: 50%;
+}
+
+.hole-bottom {
+  bottom: 10%;
+}
+
+.container {
+  width: 100%;
+  height: 600px;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #162c4e;
+  -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.calendar__month {
+  width: 100%;
+  height: 12rem;
+  background-color: #ffc60f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.calendar__month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.calendar__month h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  color: #162c4e;
+}
+
+.calendar__month p {
+  font-size: 1.6rem;
+  color: #162c4e;
+  font-weight: bold;
+}
+
+.calendar__weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar__weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.calendar__days {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.calendar__days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.calendar__days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.calendar__days--prev-date {
+  opacity: 0.5;
+}
+
+.calendar__days--next-date {
+  opacity: 0.5;
+}
+
+.calendar__days--today {
+  background-color: #ffc60f;
+  border-radius: 10px;
+}
+
+.weather {
+  font-family: "Rimouski";
+  width: 300px;
+  background-color: #ffc60f;
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  right: 2%;
+  top: 25%;
+}
+
+.weather__app-title {
+  width: 300px;
+  height: 70px;
+  border-radius: 10px 10px 0 0;
+}
+
+.weather__app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #162c4e;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.weather__notification {
+  background-color: #f8d7da;
+  display: none;
+}
+
+.weather__notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather__section {
+  width: 300px;
+  height: 260px;
+  background-color: #162c4e;
+  border-radius: 0 0 10px 10px;
+}
+
+.weather__section--icon {
+  width: 300px;
+  height: 128px;
+}
+
+.weather__section--icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.weather__section--temperature-value {
+  width: 300px;
+  height: 60px;
+}
+
+.weather__section--temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: ghostwhite;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weather__section--temperature-value span {
+  color: ghostwhite;
+  font-size: 0.5em;
+}
+
+.weather__section--temperature-description p {
+  padding: 8px;
+  margin: 0;
+  color: ghostwhite;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.weather__section--location p {
+  margin: 0;
+  padding: 0;
+  color: ghostwhite;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+footer {
+  background-color: #162c4e;
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  color: #ffc60f;
+}
+
+footer p {
+  font-size: large;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+footer{
+    background-color: $topColor;
+    width: 100%;
+    clear: both;
+    position: relative;
+    height: fit-content;
+    padding: 10px;
+    color: $dayColor;
+
+    p{
+        font-size: large;
+        text-align: center;
+    }
+}

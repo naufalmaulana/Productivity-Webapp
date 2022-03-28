@@ -1,0 +1,62 @@
+header{
+    padding: 0 25px;
+    font-size: large;
+
+    img{
+        width: 5%;
+    }
+
+}
+
+.paper{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    background: $dayColor;
+    margin: -275px -225px;
+    left: 17%;
+    top: 60%;
+    box-shadow: 0px 0px 5px 0px #888;
+    color: $topColor;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 45px;
+        height: 100%;
+        width: 2px;
+        background: $topColor;
+    }
+
+    &__lines{
+        margin-top: 40px;
+        height: calc(100% - 40px);
+        width: 100%;
+        background-image: repeating-linear-gradient($dayColor 0px, $dayColor 24px, white 25px);
+
+        &--text{
+            position: absolute;
+            top: 65px;
+            left: 55px;
+            bottom: 10px;
+            right: 10px;
+            line-height: 25px;
+            // font-family: 'Indie Flower';
+            overflow: hidden;
+            outline: none;
+            font-weight: 600;
+
+            h1{
+                font-size: 3rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                // margin-bottom: 1rem;
+                color: $topColor;
+            }
+        }
+    }
+}
+
+@import './holes';
